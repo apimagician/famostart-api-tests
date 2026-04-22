@@ -1,7 +1,7 @@
 #@time={{$timestamp}}
 @baseUrl=https://www.smartscan.nl
 
-# Famostar - Gateways - API
+# Famostar - API
 ###
 
 # @name Get Bearer Token
