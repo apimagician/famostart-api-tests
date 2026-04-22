@@ -4,8 +4,6 @@
 # Famostar - Gateways - API
 ###
 
-
-
 # @name Get Bearer Token
 POST {{baseUrl}}/en/api/v1/login_check
 Content-Type: application/json
