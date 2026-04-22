@@ -1,0 +1,28 @@
+#@time={{$timestamp}}
+@baseUrl=https://www.smartscan.nl
+
+# Famostar - Gateways - API
+###
+
+
+
+# @name Get Bearer Token
+POST {{baseUrl}}/en/api/v1/login_check
+Content-Type: application/json
+
+{
+    "username": "{{FAMOSTAR_USERNAME}}",
+    "password": "{{FAMOSTAR_PASSWORD}}"
+}
+
+
+> {%
+        client.global.set("auth_token", response.body["token"])
+%}
+
+###
+# @name Get gateways
+GET {{baseUrl}}/en/api/v1/gateways
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}

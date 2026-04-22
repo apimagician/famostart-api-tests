@@ -35,3 +35,6 @@ build/
 
 ### http requests ###
 **/http-client.private.env.json
+.env
+.env.*
+!.env.example
