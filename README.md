@@ -1,8 +1,36 @@
-# Famostar API Tests
+# Famostar API Tests & Monitoring
+
+This repository contains both an automated API test suite and a production monitoring service for Famostar.
+
+## Projects
+
+### 1. **API Pulse** (New) - Production Monitoring
+Located in: `src/Famostar.ApiPulse/`
+
+A .NET 9 ASP.NET Core background service that executes API requests from `.http` files at regular intervals (default: 1 minute). Perfect for:
+- Continuous API health monitoring
+- Scheduled task execution  
+- Testing in production environments
+- Running on Azure App Service
+
+**Key features:**
+- Parses `.http` files (REST Client format)
+- Manages authentication state across requests
+- Configurable execution interval
+- Azure App Service ready (includes health check endpoint)
+- Structured logging and error handling
+
+📖 **[Read API Pulse Documentation](src/Famostar.ApiPulse/README.md)**
+
+📦 **[Deployment Guide to Azure](DEPLOYMENT_GUIDE.md)**
+
+---
+
+### 2. **API Tests** (Original) - Test Suite
 
 Automated API test suite for Famostar services.
 
-This repository is intended to validate functional behavior, contract expectations, and regression safety for Famostar APIs across environments.
+This is intended to validate functional behavior, contract expectations, and regression safety for Famostar APIs across environments.
 
 ## Goals
 

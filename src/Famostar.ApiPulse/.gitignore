@@ -1,0 +1,21 @@
+# Ignore build output
+bin/
+obj/
+publish/
+
+# IDE
+.vscode/
+.vs/
+*.user
+*.suo
+
+# Environment
+.env
+*.local.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
